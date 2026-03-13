@@ -9,7 +9,7 @@ Prints a greeting message to the console, demonstrating the basic structure of a
 ## How to run
 
 ```bash
-python main.py
+uv run python main.py
 ```
 
 ## Expected output

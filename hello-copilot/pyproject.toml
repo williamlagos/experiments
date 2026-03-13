@@ -1,0 +1,7 @@
+[project]
+name = "hello-copilot"
+version = "0.1.0"
+description = "A minimal starter experiment — the Hello World of this repository"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []

@@ -18,7 +18,7 @@ This repository serves as a sandbox for experimenting with GitHub Copilot across
 experiments/
 ├── <experiment-name>/
 │   ├── README.md       # Description and instructions for the experiment
-│   ├── requirements.txt  # Python dependencies (if applicable)
+│   ├── pyproject.toml  # Project metadata and dependencies (uv)
 │   └── ...             # Source files
 ```
 
@@ -28,23 +28,22 @@ Each experiment lives in its own top-level directory and contains a `README.md` 
 
 ### Prerequisites
 
-- Python 3.10+
-- [pip](https://pip.pypa.io/en/stable/) or [uv](https://github.com/astral-sh/uv)
+- [uv](https://docs.astral.sh/uv/getting-started/installation/)
 
 ### Running an experiment
 
 ```bash
 cd <experiment-name>
-pip install -r requirements.txt   # install dependencies
-python main.py                    # run the experiment
+uv run python main.py
 ```
 
 ## Contributing
 
 1. Create a new directory for your experiment under the repository root.
-2. Add a `README.md` describing what the experiment does and how to run it.
-3. Include a `requirements.txt` if the experiment has Python dependencies.
-4. Open a pull request.
+2. Run `uv init` inside it to generate `pyproject.toml` and `.python-version`.
+3. Add a `README.md` describing what the experiment does and how to run it.
+4. Use `uv add <package>` to declare any dependencies.
+5. Open a pull request.
 
 ## License
 
